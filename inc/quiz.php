@@ -5,7 +5,7 @@ session_start();
 // include prewritten questions
 //include("questions.php");
 
-//include generated questions
+// include generated questions
 include("generate_questions.php");
 $show_score = false;
 
@@ -73,7 +73,7 @@ if (count($_SESSION['used_indexes']) == $total_questions) {
     
     // add random question's index to used indexes
     array_push($_SESSION['used_indexes'], $index);
-    
+
     // assign answers to an array and shuffle
     $answers = [
         $question['correctAnswer'],

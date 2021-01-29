@@ -15,8 +15,8 @@ if (!isset($_SESSION['questions'])) {
         $_SESSION['questions'][$i]['leftAdder'] = rand(20, 100);
         $_SESSION['questions'][$i]['rightAdder'] = rand(20, 100);
         $_SESSION['questions'][$i]['correctAnswer'] = $_SESSION['questions'][$i]['leftAdder'] + $_SESSION['questions'][$i]['rightAdder'];
-        $_SESSION['questions'][$i]['firstIncorrectAnswer'] = $_SESSION['questions'][$i]['leftAdder'] + $_SESSION['questions'][$i]['rightAdder'] - 14;
-        $_SESSION['questions'][$i]['secondIncorrectAnswer'] = $_SESSION['questions'][$i]['leftAdder'] + $_SESSION['questions'][$i]['rightAdder'] + 14;
+        $_SESSION['questions'][$i]['firstIncorrectAnswer'] = $_SESSION['questions'][$i]['leftAdder'] + $_SESSION['questions'][$i]['rightAdder'] - rand(1, 10);
+        $_SESSION['questions'][$i]['secondIncorrectAnswer'] = $_SESSION['questions'][$i]['leftAdder'] + $_SESSION['questions'][$i]['rightAdder'] + rand(1, 10);
     }
 }
 
