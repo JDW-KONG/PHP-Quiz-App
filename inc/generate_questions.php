@@ -23,7 +23,7 @@ if (!isset($_SESSION['questions'])) {
             $_SESSION['questions'][$i]['firstIncorrectAnswer'] = rand(-10, 10) + $_SESSION['questions'][$i]['correctAnswer'];
         } while( 
             // while first incorrect answer is in used numbers
-            in_array($_SESSION['questions'][$i]['firstIncorrectAnswer'], $used_numbers)
+            in_array($_SESSION['questions'][$i]['firstIncorrectAnswer'], $used_numbers) || $_SESSION['questions'][$i]['firstIncorrectAnswer'] == $_SESSION['questions'][$i]['correctAnswer']
         );
 
         // add first incorrect answer to used numbers
@@ -35,7 +35,7 @@ if (!isset($_SESSION['questions'])) {
             $_SESSION['questions'][$i]['secondIncorrectAnswer'] = rand(-10, 10) + $_SESSION['questions'][$i]['correctAnswer'];
         } while( 
             // while second incorrect answer is in used numbers
-            in_array($_SESSION['questions'][$i]['secondIncorrectAnswer'], $used_numbers)
+            in_array($_SESSION['questions'][$i]['secondIncorrectAnswer'], $used_numbers) || $_SESSION['questions'][$i]['secondIncorrectAnswer'] == $_SESSION['questions'][$i]['correctAnswer']
         );
 
         // add second incorrect answer to used numbers
